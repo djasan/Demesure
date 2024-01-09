@@ -102,7 +102,7 @@ textarea {
     cursor: pointer;
     background: teal;
     transition: 0.2s;
-    
+
 }
 
 #btn-submit:hover {
@@ -310,17 +310,18 @@ textarea {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(128, 0, 0, 0.628);
-    padding: 15px 20px;
+    background-color: rgb(176, 24, 24);
+    padding: -9px 20px;
     position: fixed;
     top: 0;
+    border-radius: 12px;
     width: 100%;
     z-index: 1000;
 }
 
 /* Logo */
 .logo {
-    width: 40px;
+    width: 20px;
     border-radius: 50%;
 }
 
@@ -333,11 +334,13 @@ textarea {
 }
 
 .navbar-link {
+    display: flex;
+    justify-content: space-between;
     margin-right: 20px;
     text-decoration: none;
     font-size: 18px;
-    color: #818181;
-    transition: color 0.3s;
+    color: #140303;
+    transition: color 0.6s;
 }
 
 .navbar-link:hover {
