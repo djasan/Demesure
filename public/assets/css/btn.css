@@ -1,0 +1,33 @@
+/* public/css/styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  label {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    padding-left: 30px;
+    margin-right: 15px;
+  }
+  
+  input[type="checkbox"] {
+    display: none;
+  }
+  
+  span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    background-color: #ccc;
+    border: 1px solid #aaa;
+    border-radius: 3px;
+  }
+  
+  input[type="checkbox"]:checked + span {
+    background-color: #4caf50;
+  }
+  
