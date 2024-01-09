@@ -1,19 +1,35 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
-        {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
-        {% block stylesheets %}
-            {{ encore_entry_link_tags('app') }}
-        {% endblock %}
+<!-- templates/gallery/index.html.twig -->
+{% extends 'base.html.twig' %}
 
-        {% block javascripts %}
-            {{ encore_entry_script_tags('app') }}
-        {% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-    </body>
-</html>
+{% block title %}Photo Gallery{% endblock %}
+
+{% block body %}
+  <div class="gallery-container">
+    {% for photo in photos %}
+      <div class="gallery-item" onclick="openLightbox('{{ asset('path/to/photos/' ~ photo.filename) }}')">
+        <img src="{{ asset('path/to/photos/' ~ photo.filename) }}" alt="{{ photo.caption }}">
+      </div>
+    {% endfor %}
+  </div>
+
+  <div class="lightbox" id="lightbox">
+    <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+    <img id="lightbox-image" src="" alt="">
+  </div>
+
+  <script>
+    function openLightbox(imageSrc) {
+      document.getElementById('lightbox-image').src = imageSrc;
+      document.getElementById('lightbox').classList.add('fade-in');
+      document.getElementById('lightbox').style.display = 'flex';
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('fade-in');
+      setTimeout(() => {
+        document.getElementById('lightbox').style.display = 'none';
+      }, 500);
+    }
+  </script>
+{% endblock %}
+

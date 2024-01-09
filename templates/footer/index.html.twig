@@ -1,20 +1,42 @@
+<!-- templates/index.html.twig -->
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello FooterController!{% endblock %}
+{% block title %}Accueil{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+    <!-- ... votre contenu de page ... -->
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Réseaux Sociaux</h3>
+                <div class="social-icons">
+                    <i class="fab fa-facebook social-icon"></i>
+                    <i class="fab fa-twitter social-icon"></i>
+                    <i class="fab fa-instagram social-icon"></i>
+                    <!-- Ajoutez d'autres icônes de réseaux sociaux si nécessaire -->
+                </div>
+            </div>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ '/Users/sqnson/Documents/Demesure/src/Controller/FooterController.php'|file_link(0) }}">src/Controller/FooterController.php</a></code></li>
-        <li>Your template at <code><a href="{{ '/Users/sqnson/Documents/Demesure/templates/footer/index.html.twig'|file_link(0) }}">templates/footer/index.html.twig</a></code></li>
-    </ul>
-</div>
+            <div class="suggestions-section">
+                <h3>Donnez-nous votre avis</h3>
+                <p>Nous sommes toujours ouverts à vos suggestions et commentaires. Merci de prendre le temps de nous évaluer.</p>
+                <div class="rating-stars">
+                    <i class="fas fa-star star-icon"></i>
+                    <i class="fas fa-star star-icon"></i>
+                    <i class="fas fa-star star-icon"></i>
+                    <i class="fas fa-star star-icon"></i>
+                    <i class="far fa-star star-icon"></i>
+                </div>
+            </div>
+
+            <div class="legal-section">
+                <h3>Informations Légales</h3>
+                <p>Conditions Générales de Vente</p>
+                <p>Conditions d'Utilisation</p>
+                <p>Politique de Confidentialité (RGPD)</p>
+            </div>
+        </div>
+    </footer>
 {% endblock %}
+

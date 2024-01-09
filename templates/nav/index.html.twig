@@ -1,20 +1,39 @@
-{% extends 'base.html.twig' %}
+{# templates/base.html.twig #}
 
-{% block title %}Hello NavController!{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- ... autres balises head ... -->
+    <link rel="stylesheet" href="{{ asset('path/to/your/css/style.css') }}">
+</head>
+<body>
+    <div class="navbar">
+        <img src="{{ asset('path/to/your/logo.png') }}" alt="Logo" class="logo">
+        <div class="burger-icon" onclick="toggleSidebar()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="navbar-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
 
-{% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+    <div class="sidebar">
+        <div class="close" onclick="toggleSidebar()">&times;</div>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </div>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+    <!-- ... contenu de la page ... -->
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ '/Users/sqnson/Documents/Demesure/src/Controller/NavController.php'|file_link(0) }}">src/Controller/NavController.php</a></code></li>
-        <li>Your template at <code><a href="{{ '/Users/sqnson/Documents/Demesure/templates/nav/index.html.twig'|file_link(0) }}">templates/nav/index.html.twig</a></code></li>
-    </ul>
-</div>
-{% endblock %}
+    <script>
+        function toggleSidebar() {
+            document.querySelector('.sidebar').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

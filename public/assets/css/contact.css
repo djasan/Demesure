@@ -1,0 +1,78 @@
+/* GRID */
+.grid-container {
+    display: grid;
+    grid-template-columns: 30% 70%;
+  }
+  
+  .grid img {
+    width: 80%;
+    margin: 20px auto;
+    display: block;
+  }
+  
+  form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+      "name email"
+      "message message"
+      "empty submit";
+  }
+  
+  input,
+  textarea {
+    margin: 5px;
+    border: 1px solid darkblue;
+    padding: 10px;
+    font-size: 1.1rem;
+    font-family: 'Abyssinica SIL', serif;
+    border-radius: 5px;
+  }
+  
+  textarea {
+    grid-area: message;
+    height: 80px;
+    resize: none;
+  }
+  
+  #btn-submit {
+    grid-area: submit;
+    cursor: pointer;
+    background: teal;
+    transition: 0.2s;
+  }
+  
+  #btn-submit:hover {
+    background: rgba(0, 128, 128, 0.425);
+    color: white;
+  }
+  
+  /* RESPONSIVE */
+  @media screen and (max-width: 1044px) {
+    .grid-container {
+      display: block;
+    }
+  
+    .grid-container img {
+      width: 40%;
+    }
+  }
+  
+  @media screen and (max-width: 576px) {
+    form {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+      grid-template-areas:
+        "name"
+        "email"
+        "message"
+        "submit";
+    }
+  
+    input,
+    textarea {
+      font-size: 0.8rem;
+    }
+  }
+  
