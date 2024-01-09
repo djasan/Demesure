@@ -2,24 +2,41 @@
 
 body {
     font-family: Arial, sans-serif;
-  }
-  
-  label {
+}
+
+label {
     cursor: pointer;
     display: inline-block;
     position: relative;
     padding-left: 6px;
     margin-right: 15px;
     border: 2px solid darkblue;
-    background-color: #aaa;
-  }
-  
-  input[type="checkbox"] {
-  
+    background-color: #120909;
+    border-radius: 6px;
+
+}
+
+div.message {
+    font-size: 16px;
+    color: aliceblue;
+}
+
+div.name {
+    font-size: 16px;
+    color: aliceblue;
+}
+
+div.email {
+    font-size: 16px;
+    color: aliceblue;
+}
+
+input[type="checkbox"] {
+
     display: none;
-  }
-  
-  span {
+}
+
+span {
     position: absolute;
     left: 0;
     top: 0;
@@ -28,164 +45,173 @@ body {
     background-color: #ccc;
     border: 1px solid #aaa;
     border-radius: 3px;
-  }
-  
-  input[type="checkbox"]:checked + span {
+}
+
+input[type="checkbox"]:checked+span {
     background-color: #4caf50;
-  }
-  /* GRID */
+}
+
+/* GRID */
 .grid-container {
     display: grid;
     grid-template-columns: 30% 70%;
     background-color: teal;
-  }
-  
-  .grid img {
+    border-radius: 10px;
+}
+
+.grid img {
     width: 80%;
     margin: 20px auto;
     display: block;
-  }
-  
-  form {
+    background-color: rgba(165, 42, 42, 0.816);
+    border-radius: 10px;
+}
+
+
+
+form {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas:
-      "name email"
-      "message message"
-      "empty submit";
-  }
-  
-  input,
-  textarea {
+        "name email"
+        "message message"
+        "empty submit";
+}
+
+input,
+textarea {
     margin: 5px;
     border: 1px solid darkblue;
     padding: 10px;
     font-size: 1.1rem;
     font-family: 'Abyssinica SIL', serif;
     border-radius: 34px;
-  }
-  
-  textarea {
+}
+
+textarea {
     border: 1px solid darkblue;
     grid-area: message;
     height: 80px;
     resize: none;
     border-radius: 14px;
-  }
-  
-  #btn-submit {
+}
+
+#btn-submit {
     grid-area: submit;
     cursor: pointer;
     background: teal;
     transition: 0.2s;
-  }
-  
-  #btn-submit:hover {
+    
+}
+
+#btn-submit:hover {
     background: rgba(0, 128, 128, 0.425);
-    color: white;
-  }/* Footer Styles */
+    color: rgb(209, 35, 35);
+}
+
+/* Footer Styles */
 .footer {
     background-color: #333;
     color: #fff;
     padding: 40px 20px;
-  }
-  
-  .footer-content {
+}
+
+.footer-content {
     display: flex;
     justify-content: space-between;
     max-width: 1200px;
     margin: 0 auto;
-  }
-  
-  .footer-section {
+}
+
+.footer-section {
     width: 30%;
-  }
-  
-  .footer-section h3 {
+}
+
+.footer-section h3 {
     font-size: 20px;
     margin-bottom: 20px;
-  }
-  
-  .footer-section p {
+}
+
+.footer-section p {
     font-size: 16px;
     line-height: 1.6;
-  }
-  
-  /* Social Media Icons */
-  .social-icons {
+}
+
+/* Social Media Icons */
+.social-icons {
     display: flex;
     gap: 20px;
-  }
-  
-  .social-icon {
+}
+
+.social-icon {
     font-size: 24px;
     color: #fff;
     transition: color 0.3s;
-  }
-  
-  .social-icon:hover {
+}
+
+.social-icon:hover {
     color: #4caf50;
-  }
-  
-  /* Suggestions and Ratings */
-  .suggestions-section {
+}
+
+/* Suggestions and Ratings */
+.suggestions-section {
     width: 40%;
-  }
-  
-  .suggestions-title {
+}
+
+.suggestions-title {
     font-size: 20px;
     margin-bottom: 20px;
-  }
-  
-  .rating-stars {
+}
+
+.rating-stars {
     display: flex;
     gap: 10px;
-  }
-  
-  .star-icon {
+}
+
+.star-icon {
     font-size: 24px;
     color: #ffcc00;
-  }
-  
-  /* Legal Information */
-  .legal-section {
+}
+
+/* Legal Information */
+.legal-section {
     width: 25%;
-  }
-  
-  .legal-title {
+}
+
+.legal-title {
     font-size: 20px;
     margin-bottom: 20px;
-  }
-  
- /* Gallery Styles */
+}
+
+/* Gallery Styles */
 .gallery-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 16px;
     margin: 20px;
-  }
-  
-  .gallery-item {
+}
+
+.gallery-item {
     position: relative;
     overflow: hidden;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .gallery-item img {
+}
+
+.gallery-item img {
     width: 100%;
     height: auto;
     border-radius: 8px;
     transition: transform 0.3s ease;
-  }
-  
-  .gallery-item:hover img {
+}
+
+.gallery-item:hover img {
     transform: scale(1.1);
-  }
-  
-  /* Lightbox Styles */
-  .lightbox {
+}
+
+/* Lightbox Styles */
+.lightbox {
     display: none;
     position: fixed;
     top: 0;
@@ -195,74 +221,76 @@ body {
     background: rgba(0, 0, 0, 0.9);
     justify-content: center;
     align-items: center;
-  }
-  
-  .lightbox img {
+}
+
+.lightbox img {
     max-width: 90%;
     max-height: 90%;
     border-radius: 8px;
-  }
-  
-  .lightbox-close {
+}
+
+.lightbox-close {
     position: absolute;
     top: 10px;
     right: 10px;
     font-size: 24px;
     color: white;
     cursor: pointer;
-  }
-  
-  /* Lightbox Animation */
-  .fade-in {
+}
+
+/* Lightbox Animation */
+.fade-in {
     animation: fadeIn 0.5s ease;
-  }
-  
-  @keyframes fadeIn {
+}
+
+@keyframes fadeIn {
     from {
-      opacity: 0;
+        opacity: 0;
     }
+
     to {
-      opacity: 1;
+        opacity: 1;
     }
-  }
-  /* Home Page Styles */
+}
+
+/* Home Page Styles */
 .home-container {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-  }
-  
-  /* Section Styles */
-  .section {
+}
+
+/* Section Styles */
+.section {
     margin-bottom: 40px;
-  }
-  
-  .section h2 {
+}
+
+.section h2 {
     font-size: 24px;
     color: #333;
     margin-bottom: 20px;
-  }
-  
-  .section p {
+}
+
+.section p {
     font-size: 16px;
     line-height: 1.6;
     color: #555;
-  }
-  
-  .section img {
+}
+
+.section img {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
     margin-top: 20px;
-  }
-  
-  /* Call to Action */
-  .cta {
+}
+
+/* Call to Action */
+.cta {
     text-align: center;
     margin-top: 40px;
-  }
-  
-  .cta a {
+}
+
+.cta a {
     display: inline-block;
     padding: 10px 20px;
     font-size: 18px;
@@ -271,12 +299,13 @@ body {
     color: #fff;
     border-radius: 5px;
     transition: background-color 0.3s;
-  }
-  
-  .cta a:hover {
+}
+
+.cta a:hover {
     background-color: #45a049;
-  }
-  /* Navbar */
+}
+
+/* Navbar */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -287,50 +316,50 @@ body {
     top: 0;
     width: 100%;
     z-index: 1000;
-  }
-  
-  /* Logo */
-  .logo {
+}
+
+/* Logo */
+.logo {
     width: 40px;
     border-radius: 50%;
-  }
-  
-  /* Navbar Links */
-  .navbar-links {
+}
+
+/* Navbar Links */
+.navbar-links {
     display: flex;
     list-style-type: none;
     margin: 0;
     padding: 0;
-  }
-  
-  .navbar-link {
+}
+
+.navbar-link {
     margin-right: 20px;
     text-decoration: none;
     font-size: 18px;
     color: #818181;
     transition: color 0.3s;
-  }
-  
-  .navbar-link:hover {
+}
+
+.navbar-link:hover {
     color: #111;
-  }
-  
-  /* Burger Icon */
-  .burger-icon {
+}
+
+/* Burger Icon */
+.burger-icon {
     display: none;
     cursor: pointer;
-  }
-  
-  .burger-icon span {
+}
+
+.burger-icon span {
     display: block;
     width: 35px;
     height: 5px;
     background-color: rgb(0, 0, 0);
     margin: 6px 0;
-  }
-  
-  /* Sidebar */
-  .sidebar {
+}
+
+/* Sidebar */
+.sidebar {
     height: 100%;
     width: 250px;
     position: fixed;
@@ -339,41 +368,42 @@ body {
     background-color: rgba(128, 0, 0, 0.628);
     padding-top: 60px;
     transition: left 0.5s ease;
-  }
-  
-  .sidebar a {
+}
+
+.sidebar a {
     text-decoration: none;
     font-size: 18px;
     color: #818181;
     padding: 15px 20px;
     display: block;
     transition: color 0.3s;
-  }
-  
-  .sidebar a:hover {
+}
+
+.sidebar a:hover {
     color: #111;
-  }
-  
-  .sidebar.active {
+}
+
+.sidebar.active {
     left: 0;
-  }
-  
-  /* Close btn */
-  .sidebar .close {
+}
+
+/* Close btn */
+.sidebar .close {
     position: absolute;
     top: 0;
     right: 25px;
     font-size: 36px;
     cursor: pointer;
-  }
-   /* Responsive Styles */
-   @media screen and (max-width: 768px) {
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
     .footer-content {
-      flex-direction: column;
+        flex-direction: column;
     }
-  
+
     .footer-section {
-      width: 100%;
-      margin-bottom: 40px;
+        width: 100%;
+        margin-bottom: 40px;
     }
-  }
+}
