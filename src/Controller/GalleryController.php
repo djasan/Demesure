@@ -13,8 +13,19 @@ class GalleryController extends AbstractController
      */
     public function index(): Response
     {
+        // Exemple de tableau associatif pour simuler des données de photos
+        $photos = [
+            ['filename' => 'ppdjs21.png', 'caption' => 'Description de la photo 1'],
+            ['filename' => 'ppdjs13.png', 'caption' => 'Description de la photo 2'],
+            ['filename' => 'ppdjs15.png', 'caption' => 'Description de la photo 3'],
+            ['filename' => 'ppdjs22.png', 'caption' => 'Description de la photo 4'],
+            ['filename' => 'ppdjs14.png', 'caption' => 'Description de la photo 5'],
+            // Ajoutez d'autres photos selon votre besoin
+        ];
+
+        // Rendez votre template en passant les photos comme variable
         return $this->render('gallery/index.html.twig', [
-            'controller_name' => 'GalleryController',
+            'photos' => $photos,
         ]);
     }
 }

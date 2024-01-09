@@ -7,9 +7,9 @@
 {% block body %}
     <div class="grid-container">
         <div class="grid">
-            <img src="/path/to/your/image.jpg" alt="Your Image">
+            <img src="/assets/img/fer-acajou.svg" alt="Your Image">
         </div>
-        <form class="grid" method="post" action="{{ path('contact_submit') }}">
+        <form class="grid" method="post" {# action="{{ path('contact_submit') }} "#}>
             {{ form_start(form) }}
             
             <div class="name">

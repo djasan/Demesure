@@ -1,16 +1,12 @@
-<!-- templates/gallery/index.html.twig -->
-{% extends 'base.html.twig' %}
 
-{% block title %}Photos Gallery{% endblock %}
-
-{% block body %}
-  <div class="gallery-container">
+<div class="gallery-container">
     {% for photo in photos %}
-      <div class="gallery-item" onclick="openLightbox('{{ asset('path/to/photos/' ~ photo.filename) }}')">
-        <img src="{{ asset('path/to/photos/' ~ photo.filename) }}" alt="{{ photo.caption }}">
-      </div>
+        <div class="gallery-item" onclick="openLightbox('{{ asset('/assets/img/' ~ photo.filename) }}')">
+            <img src="{{ asset('/assets/img/' ~ photo.filename) }}" alt="{{ photo.caption }}">
+        </div>
     {% endfor %}
-  </div>
+</div>
+
 
   <div class="lightbox" id="lightbox">
     <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
@@ -31,5 +27,5 @@
       }, 500);
     }
   </script>
-{% endblock %}
+
 
