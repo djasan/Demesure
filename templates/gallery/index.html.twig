@@ -1,3 +1,6 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
 
 <div class="gallery-container">
     {% for photo in photos %}
@@ -7,25 +10,24 @@
     {% endfor %}
 </div>
 
-
-  <div class="lightbox" id="lightbox">
+<div class="lightbox" id="lightbox">
     <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
     <img id="lightbox-image" src="" alt="">
-  </div>
+</div>
 
-  <script>
+<script>
     function openLightbox(imageSrc) {
-      document.getElementById('lightbox-image').src = imageSrc;
-      document.getElementById('lightbox').classList.add('fade-in');
-      document.getElementById('lightbox').style.display = 'flex';
+        document.getElementById('lightbox-image').src = imageSrc;
+        document.getElementById('lightbox').classList.add('fade-in');
+        document.getElementById('lightbox').style.display = 'flex';
     }
 
     function closeLightbox() {
-      document.getElementById('lightbox').classList.remove('fade-in');
-      setTimeout(() => {
-        document.getElementById('lightbox').style.display = 'none';
-      }, 500);
+        document.getElementById('lightbox').classList.remove('fade-in');
+        setTimeout(() => {
+            document.getElementById('lightbox').style.display = 'none';
+        }, 500);
     }
-  </script>
+</script>
 
-
+{% endblock %}

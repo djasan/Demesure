@@ -1,5 +1,3 @@
-{# templates/contact/index.html.twig #}
-
 {% extends 'base.html.twig' %}
 
 {% block title %}Contact{% endblock %}
@@ -7,9 +5,9 @@
 {% block body %}
     <div class="grid-container">
         <div class="grid">
-            <img src="/assets/img/fer-acajou.svg" alt="Your Image">
+            <img src="{{ asset('/assets/img/fer-acajou.svg') }}" alt="Your Image">
         </div>
-        <form class="grid" method="post" {# action="{{ path('contact_submit') }} "#}>
+        <form class="grid" method="post" action="{{ path('contact') }}">
             {{ form_start(form) }}
             
             <div class="name">
@@ -28,11 +26,10 @@
             </div>
             
             <div class="submit">
-                {{ form_widget(form.submit, { 'attr': {'class': 'btn-submit'} }) }}
+                {{ form_widget(form.submit) }}
             </div>
             
             {{ form_end(form) }}
         </form>
     </div>
 {% endblock %}
-

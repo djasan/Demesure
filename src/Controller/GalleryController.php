@@ -18,8 +18,8 @@ class GalleryController extends AbstractController
             ['filename' => 'ppdjs21.png', 'caption' => 'Description de la photo 1'],
             ['filename' => 'ppdjs13.png', 'caption' => 'Description de la photo 2'],
             ['filename' => 'ppdjs15.png', 'caption' => 'Description de la photo 3'],
-            ['filename' => 'ppdjs22.png', 'caption' => 'Description de la photo 4'],
-            ['filename' => 'ppdjs14.png', 'caption' => 'Description de la photo 5'],
+            ['filename' => 'ppdjs14.png', 'caption' => 'Description de la photo 4'],
+            ['filename' => 'ppdjs33.png', 'caption' => 'Description de la photo 5'],
             // Ajoutez d'autres photos selon votre besoin
         ];
 

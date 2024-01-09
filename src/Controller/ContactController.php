@@ -1,27 +1,30 @@
 <?php
 
+// src/Controller/ContactController.php
+
 namespace App\Controller;
 
 use App\Form\ContactFormType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Component\HttpFoundation\Request;
 
 class ContactController extends AbstractController
 {
-    /**
-     * @Route("/contact", name="contact")
-     */
+    #[Route('/contact', name: 'contact')]
     public function index(Request $request): Response
     {
-        // Créez une instance de votre formulaire
         $form = $this->createForm(ContactFormType::class);
 
-        // Gérez la soumission du formulaire si nécessaire
         $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()) {
+            // Vous pouvez traiter le formulaire ici (par exemple, envoyer un e-mail)
 
-        // Rendez votre template en passant le formulaire comme variable
+            // Redirigez l'utilisateur ou faites ce que vous avez besoin après la soumission du formulaire
+            return $this->redirectToRoute('homepage');
+        }
+
         return $this->render('contact/index.html.twig', [
             'form' => $form->createView(),
         ]);
